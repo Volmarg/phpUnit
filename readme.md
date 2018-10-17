@@ -9,7 +9,10 @@ This repo contains simple phpUnit based tests.
 
 <ul>
 <li>PHP 7.x</li>
-<li>PHP storm,</li>
+<li>PHP storm,
+    <ul>
+        <li>Automatic phpUnit retests,</li>
+    </ul></li>    
 <li>phpUnit (remote),</li>
 <li>xDebug (remote),</li>
 <li>Linux (used as server),</li>
