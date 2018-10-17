@@ -33,4 +33,21 @@ class Calculations extends PHPUnit\Framework\TestCase {
         $result = $this->calculator->divide($a, $b);
         $this->assertEquals($expected, $result);
     }
+
+    /**
+     * @dataProvider CalculationsDataProvivder::substractDataProvider();
+     */
+
+    public function testSubstraction($a, $b, $expected) {
+        $result = $this->calculator->substract($a, $b);
+        $this->assertEquals($expected, $result);
+    }
+
+    /**
+     * @dataProvider CalculationsDataProvivder::sqrtDataProvider();
+     */
+    public function testSqrt($a, $expected) {
+        $result = $this->calculator->sqrt($a);
+        $this->assertEquals($expected, $result);
+    }
 }

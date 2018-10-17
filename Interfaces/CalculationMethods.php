@@ -6,9 +6,13 @@
  * Time: 21:31
  */
 
-interface CalculationMethods
-{
-    function add($a,$b);
+interface CalculationMethods {
 
-    function divide($a,$b);
+    function add(int $a, int $b);
+
+    function divide(int $a, int $b);
+
+    function substract(int $a, int $b);
+
+    function sqrt (float $a);
 }
