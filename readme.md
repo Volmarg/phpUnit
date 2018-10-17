@@ -13,7 +13,12 @@ This repo contains simple phpUnit based tests.
     <ul>
         <li>Automatic phpUnit retests,</li>
     </ul></li>    
-<li>phpUnit (remote),</li>
+<li>phpUnit (remote),
+    <ul>
+        <li>assertEquals</li>
+        <li>DataProviders</li>
+        <li>testDouble</li>
+    </ul></li>
 <li>xDebug (remote),</li>
 <li>Linux (used as server),</li>
 <li>Windows (used as workspace),</li>

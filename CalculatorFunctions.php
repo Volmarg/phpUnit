@@ -17,6 +17,16 @@ class CalculatorFunctions implements CalculationMethods {
     }
 
     public function sqrt(float $a): float {
-        return $a * $a;
+        return pow($a,2);
     }
+
+    public function ceil(float $a) :int{
+
+    }
+
+    private function isCeilable(float $a) :bool{
+
+    }
+
+
 }

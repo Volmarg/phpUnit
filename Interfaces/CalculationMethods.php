@@ -15,4 +15,6 @@ interface CalculationMethods {
     function substract(int $a, int $b);
 
     function sqrt (float $a);
+
+    function ceil(float $a);
 }
