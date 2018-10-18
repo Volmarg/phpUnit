@@ -22,7 +22,7 @@ class Calculations extends PHPUnit\Framework\TestCase {
 
     public function testAdd($a, $b, $expected) {
         $result = $this->calculator->add($a, $b, $expected);
-        $this->assertEquals($expected, $result);
+        $this->assertEquals($expected, $result, 'Adding assertion failed');
     }
 
     /**
@@ -31,7 +31,7 @@ class Calculations extends PHPUnit\Framework\TestCase {
 
     public function testDivide($a, $b, $expected) {
         $result = $this->calculator->divide($a, $b);
-        $this->assertEquals($expected, $result);
+        $this->assertEquals($expected, $result, 'Dividing assertion failed');
     }
 
     /**
@@ -40,7 +40,7 @@ class Calculations extends PHPUnit\Framework\TestCase {
 
     public function testSubstraction($a, $b, $expected) {
         $result = $this->calculator->substract($a, $b);
-        $this->assertEquals($expected, $result);
+        $this->assertEquals($expected, $result, 'Substraction assertion failed');
     }
 
     /**
@@ -48,6 +48,6 @@ class Calculations extends PHPUnit\Framework\TestCase {
      */
     public function testSqrt($a, $expected) {
         $result = $this->calculator->sqrt($a);
-        $this->assertEquals($expected, $result);
+        $this->assertEquals($expected, $result, 'Sqrt assertion failed');
     }
 }

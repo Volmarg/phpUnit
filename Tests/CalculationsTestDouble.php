@@ -22,10 +22,11 @@ class CalculationsTestDouble extends PHPUnit\Framework\TestCase {
         # This configures pseudoClass?
         $mock->expects($this->any())
             ->method('isCeilable')
-            ->will($this->returnValue(false));
+            ->will($this->returnValue(true));
 
         #This calls the method mocked above?
-        $this->assertEquals(true, $mock->isCeilable(false));
+
+        $this->assertEquals(true, $mock->isCeilable(false),'testDouble failed');
     }
 
 }
