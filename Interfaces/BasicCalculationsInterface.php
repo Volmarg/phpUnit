@@ -6,7 +6,7 @@
  * Time: 21:31
  */
 
-interface CalculationMethods {
+interface BasicCalculationsInterface {
 
     function add(int $a, int $b);
 

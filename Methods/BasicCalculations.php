@@ -1,8 +1,8 @@
 <?php
 
-include_once 'Interfaces/CalculationMethods.php';
+include_once '../Interfaces/BasicCalculationsInterface.php';
 
-class CalculatorFunctions implements CalculationMethods {
+class BasicCalculations implements BasicCalculationsInterface {
 
     public function add(int $a, int $b): int {
         return $a + $b;
@@ -23,10 +23,4 @@ class CalculatorFunctions implements CalculationMethods {
     public function ceil(float $a) :int{
 
     }
-
-    private function isCeilable(float $a) :bool{
-
-    }
-
-
 }

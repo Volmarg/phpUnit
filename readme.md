@@ -15,9 +15,12 @@ This repo contains simple phpUnit based tests.
     </ul></li>    
 <li>phpUnit (remote),
     <ul>
-        <li>assertEquals</li>
-        <li>DataProviders</li>
-        <li>testDouble</li>
+        <li>assertions</li>
+        <li>@dataProvider</li>
+        <li>@afterClass</li>
+        <li>@after</li>
+        <li>@depeneds</li>
+        <li>@group</li>
     </ul></li>
 <li>xDebug (remote),</li>
 <li>Linux (used as server),</li>
