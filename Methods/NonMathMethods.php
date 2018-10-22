@@ -11,13 +11,10 @@ include_once '../Interfaces/NonMathMethodsInterface.php';
 
 use Interfaces\NonMathMethodsInterface as nonMathInterface;
 
-class NonMathMethods implements nonMathInterface\NonMathMethodsInterface
-{
+class NonMathMethods implements nonMathInterface\NonMathMethodsInterface {
 
     public function genRandomNum(int $min, int $max): int {
-        // TODO: Implement genRandomNum() method.
-
-        return rand($min, $max);
+        return ceil(rand($min, $max));
     }
 
 

@@ -12,8 +12,7 @@ include_once 'DataProviders/NonMathMethodsDataProvider.php';
 use \PHPUnit\Framework\TestCase as phpUnit;
 use \Methods\NonMathMethods as nonMath;
 
-class NonMathMethodsTest extends phpUnit
-{
+class NonMathMethodsTest extends phpUnit {
 
     private $non_math;
 
@@ -31,11 +30,10 @@ class NonMathMethodsTest extends phpUnit
 
 
     public function testGenRandomNum($min, $max) {
-        //assert both are type int
-        //assert is within range min/max
-
         $result = $this->non_math->genRandomNum($min, $max);
-        $this->assertTrue($result);
+        $this->assertInternalType('int', $result);
+        $this->assertGreaterThanOrEqual($min, $result);
+        $this->assertLessThanOrEqual($max, $result);
     }
 
 }
