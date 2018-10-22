@@ -10,11 +10,17 @@ use PHPUnit\Framework\TestCase as phpUnit;
 
 include_once '../Methods/DataDisplaying.php';
 
-/**
- * @group displayingTest
- */
 
 class DataDisplayingTest extends phpUnit {
+
+    /**
+     * @beforeClass
+     */
+    public static function beforeClassMethod(){
+      echo __CLASS__;
+      //die stops all tests so this works
+    }
+
 
     private $data_display;
 

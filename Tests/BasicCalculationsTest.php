@@ -3,9 +3,6 @@
 include_once '../Methods/BasicCalculations.php';
 include_once 'DataProviders/BasicCalculationDataProvider.php';
 
-/**
- * @group calculationTests
- */
 class BasicCalculationsTest extends PHPUnit\Framework\TestCase {
 
     private $calculator;

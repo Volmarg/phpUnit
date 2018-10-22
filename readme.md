@@ -20,10 +20,18 @@ This repo contains simple phpUnit based tests.
         <li>@afterClass</li>
         <li>@after</li>
         <li>@depeneds</li>
-        <li>@group</li>
+        <li>@before</li>
+        <li>@beforeClass</li>
     </ul></li>
 <li>xDebug (remote),</li>
 <li>Linux (used as server),</li>
 <li>Windows (used as workspace),</li>
 <li>TDD,</li>
 </li>
+</ul>
+<h4>Notes</h4>
+<hr/>
+
+<ul>
+    <li>@datProvider can't handle namespaced static functions</li>
+</ul>

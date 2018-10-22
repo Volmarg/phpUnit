@@ -8,7 +8,8 @@
 
 include_once '../Interfaces/DataDisplayingInterface.php';
 
-class DataDisplaying implements DataDisplayingInterface {
+class DataDisplaying implements DataDisplayingInterface
+{
 
     public function displayResult(float $result): string {
         $text = 'Your result is: ';

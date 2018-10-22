@@ -2,7 +2,8 @@
 
 include_once '../Interfaces/BasicCalculationsInterface.php';
 
-class BasicCalculations implements BasicCalculationsInterface {
+class BasicCalculations implements BasicCalculationsInterface
+{
 
     public function add(int $a, int $b): int {
         return $a + $b;
@@ -17,10 +18,10 @@ class BasicCalculations implements BasicCalculationsInterface {
     }
 
     public function sqrt(float $a): float {
-        return pow($a,2);
+        return pow($a, 2);
     }
 
-    public function ceil(float $a) :int{
+    public function ceil(float $a): int {
 
     }
 }
