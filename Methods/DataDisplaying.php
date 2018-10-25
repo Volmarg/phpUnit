@@ -6,10 +6,9 @@
  * Time: 18:08
  */
 
-#include_once '../Interfaces/DataDisplayingInterface.php';
-#implements DataDisplayingInterface
+include_once '../Interfaces/DataDisplayingInterface.php';
 
-class DataDisplaying
+class DataDisplaying implements DataDisplayingInterface
 {
 
     public function displayResult(float $result): string {

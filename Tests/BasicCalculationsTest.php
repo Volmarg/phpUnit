@@ -1,7 +1,7 @@
 <?php
 
 include_once '../Methods/BasicCalculations.php';
-include_once 'DataProviders/BasicCalculationDataProvider.php';
+include_once __DIR__.'/DataProviders/BasicCalculationDataProvider.php';
 
 class BasicCalculationsTest extends PHPUnit\Framework\TestCase {
 
