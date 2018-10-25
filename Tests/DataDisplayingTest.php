@@ -16,9 +16,9 @@ class DataDisplayingTest extends phpUnit {
     /**
      * @beforeClass
      */
-    public static function beforeClassMethod(){
-      echo __CLASS__;
-      //die stops all tests so this works
+    public static function beforeClassMethod() {
+        echo __CLASS__;
+        //die stops all tests so this works
     }
 
 
@@ -35,6 +35,10 @@ class DataDisplayingTest extends phpUnit {
         $this->data_display = NULL;
     }
 
+    /**
+     * @covers DataDisplaying::displayResult
+     */
+
     public function testDisplaying() {
         $float_val = 2.54;
         $result = $this->data_display->displayResult($float_val);
@@ -42,6 +46,9 @@ class DataDisplayingTest extends phpUnit {
         $this->assertStringStartsWith('Your result is: ', $result);
     }
 
+    /**
+     * @covers DataDisplaying::clearResult
+     */
     public function testClearResult() {
         $result = $this->data_display->clearResult();
         $this->assertFalse($result);

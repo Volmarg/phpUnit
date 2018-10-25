@@ -16,12 +16,25 @@ This repo contains simple phpUnit based tests.
 <li>phpUnit (remote),
     <ul>
         <li>assertions</li>
-        <li>@dataProvider</li>
-        <li>@afterClass</li>
-        <li>@after</li>
-        <li>@depeneds</li>
-        <li>@before</li>
-        <li>@beforeClass</li>
+        <li>Annotations
+            <ul>
+                <li>@dataProvider</li>
+                <li>@afterClass</li>
+                <li>@after</li>
+                <li>@depeneds</li>
+                <li>@before</li>
+                <li>@beforeClass</li>
+            </ul>
+        </li>
+        <li>Fixtures
+              <ul>
+                  <li>setUp</li>
+                  <li>setUpBeforeClass</li>
+                  <li>tearDown</li>
+                  <li>tearDownAfterClass</li>
+              </ul>      
+        </li>
+        <li>Coverage</li>
     </ul></li>
 <li>xDebug (remote),</li>
 <li>Linux (used as server),</li>

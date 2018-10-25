@@ -17,6 +17,7 @@ class BasicCalculationsTest extends PHPUnit\Framework\TestCase {
     }
 
     /**
+     * @covers       BasicCalculations::add
      * @dataProvider BasicCalculationDataProvider::addDataProvider()
      */
     public function testAdd($a, $b, $expected) {
@@ -29,7 +30,7 @@ class BasicCalculationsTest extends PHPUnit\Framework\TestCase {
      */
     public function testIfCanBeDivided($a, $b, $expected) {
 
-        $this->assertInternalType('int',$b);
+        $this->assertInternalType('int', $b);
         return (gettype($b) === 'string' ? false : compact('a', 'b', 'expected'));
     }
 
@@ -38,7 +39,7 @@ class BasicCalculationsTest extends PHPUnit\Framework\TestCase {
      */
     public function testDivide($data) {
 
-        $this->assertFalse($data, "Value cannot be used for division");
+        $this->assertFalse($data, "Value cannot be used for division: " . var_export($data, true));
         $result = $this->calculator->divide($data['a'], $data['b']);
         $this->assertEquals($data['expected'], $result, 'Dividing assertion failed');
     }
