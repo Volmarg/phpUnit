@@ -7,7 +7,7 @@
  */
 
 use PHPUnit\Framework\TestCase as phpUnit;
-include_once '../Methods/DataDisplaying.php';
+include_once __DIR__.'/'.'../Methods/DataDisplaying.php';
 class ManualConsoleTestForBootstrap extends phpUnit {
 
     private $data_display;

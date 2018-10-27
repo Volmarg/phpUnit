@@ -6,7 +6,7 @@
  * Time: 18:08
  */
 
-include_once '../Interfaces/DataDisplayingInterface.php';
+include_once __DIR__.'/../Interfaces/DataDisplayingInterface.php';
 
 class DataDisplaying implements DataDisplayingInterface
 {

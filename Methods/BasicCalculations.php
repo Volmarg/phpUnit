@@ -1,6 +1,5 @@
 <?php
-
-include_once '../Interfaces/BasicCalculationsInterface.php';
+include_once __DIR__.'/../Interfaces/BasicCalculationsInterface.php';
 
 class BasicCalculations implements BasicCalculationsInterface
 {

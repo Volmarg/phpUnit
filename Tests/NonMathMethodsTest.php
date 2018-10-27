@@ -6,8 +6,8 @@
  * Time: 10:00
  */
 
-include_once '../Methods/NonMathMethods.php';
-include_once 'DataProviders/NonMathMethodsDataProvider.php';
+include_once __DIR__.'/'.'../Methods/NonMathMethods.php';
+include_once __DIR__.'/DataProviders/NonMathMethodsDataProvider.php';
 
 use \PHPUnit\Framework\TestCase as phpUnit;
 use \Methods\NonMathMethods as nonMath;

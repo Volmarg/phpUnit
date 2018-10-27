@@ -6,7 +6,7 @@
  * Time: 05:12
  */
 
-include_once '../.config.php';
+include_once __DIR__.'/'.'../.config.php';
 
 
 class SQLite extends SQLite3 {

@@ -1,7 +1,7 @@
 <?php
 
-include_once '../Methods/BasicCalculations.php';
-include_once __DIR__.'/DataProviders/BasicCalculationDataProvider.php';
+include_once __DIR__ . '/../Methods/BasicCalculations.php';
+include_once __DIR__ . '/DataProviders/BasicCalculationDataProvider.php';
 
 class BasicCalculationsTest extends PHPUnit\Framework\TestCase {
 
@@ -9,7 +9,6 @@ class BasicCalculationsTest extends PHPUnit\Framework\TestCase {
 
     protected function setUp() {
         $this->calculator = new BasicCalculations();
-
     }
 
     protected function tearDown() {

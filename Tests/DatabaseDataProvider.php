@@ -6,9 +6,9 @@
  * Time: 06:46
  */
 
-include_once '../vendor/autoload.php';
-include_once '../Methods/SQLite.php';
-include_once '../Methods/BasicCalculations.php';
+include_once __DIR__.'/'.'../vendor/autoload.php';
+include_once __DIR__.'/'.'../Methods/SQLite.php';
+include_once __DIR__.'/'.'../Methods/BasicCalculations.php';
 
 use \PHPUnit\Framework\TestCase as phpUnit;
 
