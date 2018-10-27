@@ -34,6 +34,20 @@ This repo contains simple phpUnit based tests.
                   <li>tearDownAfterClass</li>
               </ul>      
         </li>
+        <li>XML configuration
+              <ul>
+                  <li>logging</li>
+                  <li>testsuites</li>
+                  <li>includePath</li>
+                  <li>directory
+                        <ul>
+                         <li>exclude</li>                        
+                         <li>file</li>                        
+                         <li>suffix</li>                        
+                        </ul>                  
+                  </li>
+              </ul>      
+        </li>        
         <li>Coverage</li>
     </ul></li>
 <li>xDebug (remote),</li>
@@ -48,3 +62,9 @@ This repo contains simple phpUnit based tests.
 <ul>
     <li>@datProvider can't handle namespaced static functions</li>
 </ul>
+
+<h4>Example generated coverages</h4>
+<hr/>
+
+<img src="https://raw.githubusercontent.com/Volmarg/phpUnit/master/2.png" />
+<img src="https://raw.githubusercontent.com/Volmarg/phpUnit/master/1.png" />
