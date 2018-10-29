@@ -60,7 +60,9 @@ This repo contains simple phpUnit based tests.
 <hr/>
 
 <ul>
-    <li>@datProvider can't handle namespaced static functions</li>
+    <li>@dataProvider can't handle namespaced static functions</li>
+    <li>@includePath actually messes up all inclusions since files included from some other directories use this path and can't find the pointed files</li>
+    <li>test can't @depend on test which has @dataProvider - this will resull in test that we depend on returning null</li>
 </ul>
 
 <h4>Example generated coverages</h4>

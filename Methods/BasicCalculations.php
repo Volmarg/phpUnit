@@ -20,7 +20,5 @@ class BasicCalculations implements BasicCalculationsInterface
         return pow($a, 2);
     }
 
-    public function ceil(float $a): int {
-
-    }
+  
 }

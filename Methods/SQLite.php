@@ -10,7 +10,6 @@ include_once __DIR__.'/'.'../.config.php';
 
 
 class SQLite extends SQLite3 {
-
     public $path_to_file;
 
     function __construct() {
@@ -31,5 +30,4 @@ class SQLite extends SQLite3 {
         }
 
     }
-
 }

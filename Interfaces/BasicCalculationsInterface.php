@@ -16,5 +16,4 @@ interface BasicCalculationsInterface {
 
     function sqrt (float $a);
 
-    function ceil(float $a);
 }

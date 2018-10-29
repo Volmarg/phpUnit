@@ -24,27 +24,28 @@ class BasicCalculationsTest extends PHPUnit\Framework\TestCase {
         $this->assertEquals($expected, $result, 'Adding assertion failed');
     }
 
-    /**
-     * @dataProvider BasicCalculationDataProvider::divideDataProvider()
-     */
-    public function testIfCanBeDivided($a, $b, $expected) {
-
-        $this->assertInternalType('int', $b);
-        return (gettype($b) === 'string' ? false : compact('a', 'b', 'expected'));
+    public function testIfCanBeDivided() {
+        $dataProvider = BasicCalculationDataProvider::divideDataProvider();
+        foreach ($dataProvider as $oneDataSet) {
+            $this->assertInternalType('int', $oneDataSet[0]);
+            $this->assertInternalType('int', $oneDataSet[1]);
+        }
     }
 
     /**
      * @depends      testIfCanBeDivided
+     * @dataProvider BasicCalculationDataProvider::divideDataProvider()
+     * @covers       BasicCalculations::divide
      */
-    public function testDivide($data) {
+    public function testDivide($a, $b, $expected) {
 
-        $this->assertFalse($data, "Value cannot be used for division: " . var_export($data, true));
-        $result = $this->calculator->divide($data['a'], $data['b']);
-        $this->assertEquals($data['expected'], $result, 'Dividing assertion failed');
+        $result = $this->calculator->divide($a, $b);
+        $this->assertEquals($expected, $result, 'Dividing assertion failed');
     }
 
     /**
      * @dataProvider BasicCalculationDataProvider::substractDataProvider();
+     * @covers BasicCalculations::substract
      */
     public function testSubstraction($a, $b, $expected) {
         $result = $this->calculator->substract($a, $b);
@@ -53,9 +54,11 @@ class BasicCalculationsTest extends PHPUnit\Framework\TestCase {
 
     /**
      * @dataProvider BasicCalculationDataProvider::sqrtDataProvider();
+     * @covers BasicCalculations::sqrt
      */
     public function testSqrt($a, $expected) {
         $result = $this->calculator->sqrt($a);
         $this->assertEquals($expected, $result, 'Sqrt assertion failed');
     }
+
 }
