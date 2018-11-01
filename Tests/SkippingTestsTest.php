@@ -34,6 +34,13 @@ class SkippingTestsTest extends phpUnit
 
     }
 
+    /**
+     * @requires function ob_start
+     */
+    public function testRequires(){
+        $this->assertArrayHasKey('function',array('test'=>1,'function'=>2));
+    }
+
 
     public function tearDown() {
 

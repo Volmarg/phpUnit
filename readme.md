@@ -24,6 +24,9 @@ This repo contains simple phpUnit based tests.
                 <li>@depeneds</li>
                 <li>@before</li>
                 <li>@beforeClass</li>
+                <li>@requires</li>
+                <li>@covers</li>
+                <li>@codeCoverageIgnore</li>
             </ul>
         </li>
         <li>Fixtures
