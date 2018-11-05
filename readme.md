@@ -56,6 +56,7 @@ This repo contains simple phpUnit based tests.
                 <li>Stub</li>
                 <li>Mock</li>
                 <li>Dummy</li>
+                <li>methodMapping</li>
             </ul>
         </li>        
         <li>Coverage</li>
@@ -68,13 +69,13 @@ This repo contains simple phpUnit based tests.
 </ul>
 <h4>Notes</h4>
 <hr/>
-
 <ul>
     <li>@dataProvider can't handle namespaced static functions</li>
     <li>@includePath actually messes up all inclusions since files included from some other directories use this path and can't find the pointed files</li>
     <li>test can't @depend on test which has @dataProvider - this will resull in test that we depend on returning null</li>
     <li>there is no assertion like AssertMethodWasExecuted</li>
     <li>It's not required to defined attributes from original class in mock, same goes for existing methods in original class</li>
+    <li>stubbed method mapping works with dataProvider, but dataProvider needs to be called as argument for the $this->...map..(), you can't just pass [arg1,arg2...]</li>
 </ul>
 
 <h4>Example generated coverages</h4>

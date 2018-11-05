@@ -6,15 +6,13 @@ use \PHPUnit\Framework\{TestCase as phpUnit};
 
 #use Methods\{TestDouble};
 
-class TestDoubleTest extends phpUnit
-{
+class TestDoubleTest extends phpUnit {
     public $testDoubleClass = '';
 
 
     public function setUp() {
         $this->testDoubleClass = new TestDouble();
     }
-
 
     public function exampleStubMethod() {
 
@@ -26,7 +24,6 @@ class TestDoubleTest extends phpUnit
         return $stub;
     }
 
-
     public function testStubMethod() {
 
         $stub = $this->exampleStubMethod();
@@ -34,7 +31,6 @@ class TestDoubleTest extends phpUnit
         $this->assertInternalType('string', $stub->setName('123'));
 
     }
-
 
     public function testMockMethod() {
         $mock = $this->createMock(TestDouble::class);
@@ -46,11 +42,37 @@ class TestDoubleTest extends phpUnit
     }
 
     public function testDummyMethod() {
-        $dummy=$this->createMock(TestDouble::class);
+        $dummy = $this->createMock(TestDouble::class);
 
-        $this->assertTrue($this->testDoubleClass->requiresInstanceOfSelf($dummy));
     }
 
+    public static function dataProviderForStubMapping() {
+        return [
+            [1, 2, 3, 6],
+            [2, 4, 6, 6],
+            [3, 6, 9, 6]
+        ];
+    }
+
+    /**
+     * @dataProvider TestDoubleTest::dataProviderForStubMapping();
+     */
+
+    public function testStubMapping($a, $b, $c, $expected) {
+
+        $manual_map = [
+            [1, 2, 3, 6],
+            [2, 4, 6, 6],
+            [3, 6, 9, 6]
+        ];
+
+        $stub = $this->createMock(TestDouble::class);
+        $stub->method('mapValues')
+            ->willReturnMap($manual_map);
+
+        $result=$stub->mapValues($a,$b,$c);
+        $this->assertEquals(6, $result);
+    }
 
     public function tearDown() {
     }

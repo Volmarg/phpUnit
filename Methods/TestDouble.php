@@ -2,8 +2,7 @@
 
 #namespace Methods\TestDouble;
 
-class TestDouble
-{
+class TestDouble {
     public $name = '';
     private $dummyPrivateAttr = '';
     public $dummyPublicAttr = '';
@@ -34,6 +33,10 @@ class TestDouble
             return false;
         }
 
+    }
+
+    public function mapValues($a) {
+        return 2;
     }
 
 }
