@@ -56,7 +56,8 @@ This repo contains simple phpUnit based tests.
                 <li>Stub</li>
                 <li>Mock</li>
                 <li>Dummy</li>
-                <li>methodMapping</li>
+                <li>willReturnMap</li>
+                <li>returnCallback</li>
             </ul>
         </li>        
         <li>Coverage</li>

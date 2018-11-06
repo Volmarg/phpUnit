@@ -70,8 +70,25 @@ class TestDoubleTest extends phpUnit {
         $stub->method('mapValues')
             ->willReturnMap($manual_map);
 
-        $result=$stub->mapValues($a,$b,$c);
+        $result = $stub->mapValues($a, $b, $c);
         $this->assertEquals(6, $result);
+    }
+
+    public function stubCallBack() {
+        return '3';
+    }
+
+    public function testReturnCallback() {
+        $stub = $this->getMockBuilder(TestDouble::class)
+            ->setMethods(null)
+            ->setConstructorArgs([3])
+            ->getMock();
+
+        #$stub->method('dummyMethod')
+        #    ->with($this->stringContains('test'), $this->anything())
+        #    ->will($this->returnCallback(array($this, "stubCallBack")));
+
+        $this->assertEquals(3, $stub->dummyMethod('test', NULL));
     }
 
     public function tearDown() {

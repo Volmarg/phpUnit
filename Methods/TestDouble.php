@@ -7,14 +7,18 @@ class TestDouble {
     private $dummyPrivateAttr = '';
     public $dummyPublicAttr = '';
 
-    public function __construct() {
+    public function __construct($arg = null) {
         $this->setName('nejm');
         $this->getName();
-
+        $this->dummyPublicAttr = $arg;
     }
 
     public function dummyMethod() {
-        return null;
+        if ($this->dummyPublicAttr == null) {
+            return '4';
+        } else {
+            return $this->dummyPublicAttr;
+        }
     }
 
     public function setName($name_to_set) {
